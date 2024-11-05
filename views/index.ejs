@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="no-scroll">
+
+  <header class="header">
+    <h1>Telia Digital Hub</h1>
+  </header>
+
+  
+  <main class="content m-2">
+    <form action="/submit-answer" method="POST">
+      <label class="form-label fw-semibold mb-4"><%= question.question %></label>
+        <div>
+            <input type="radio" name="answer" value="a" required> <%= question.answers.a %><br>
+            <input type="radio" name="answer" value="b"> <%= question.answers.b %><br>
+            <input type="radio" name="answer" value="c"> <%= question.answers.c %><br>
+        </div>
+      <button type="submit" class="button">Järgmine</button>
+    </form>
+  </main>
+  
+    
+  <footer class="footer">
+    <p>Telia Eesti AS</p>
+    <p>Telia is a registered Trademark of Telia Company AB</p>
+  </footer>
+
+</body>
+
+</html>

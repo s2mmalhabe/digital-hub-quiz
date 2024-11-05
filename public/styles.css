@@ -1,0 +1,204 @@
+@font-face {
+    font-family: 'TeliaSans';
+    src: url('/fonts/TeliaSans-Bold.woff2') format('woff2'),
+         url('/fonts/TeliaSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TeliaSans';
+    src: url('/fonts/TeliaSans-BoldItalic.woff2') format('woff2'),
+         url('/fonts/TeliaSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TeliaSansHeading';
+    src: url('/fonts/TeliaSansHeading-Heading.woff2') format('woff2'),
+         url('/fonts/TeliaSansHeading-Heading.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TeliaSans';
+    src: url('/fonts/TeliaSans-Medium.woff2') format('woff2'),
+         url('/fonts/TeliaSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TeliaSans';
+    src: url('/fonts/TeliaSans-MediumItalic.woff2') format('woff2'),
+         url('/fonts/TeliaSans-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TeliaSans';
+    src: url('/fonts/TeliaSans-Regular.woff2') format('woff2'),
+         url('/fonts/TeliaSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TeliaSans';
+    src: url('/fonts/TeliaSans-RegularItalic.woff2') format('woff2'),
+         url('/fonts/TeliaSans-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+
+h1, h2, h3 {
+    font-family: 'TeliaSansHeading', sans-serif;
+    font-weight: normal; 
+}
+
+p, div, span {
+    font-family: 'TeliaSans', sans-serif;
+}
+
+
+body {
+    background-image: url('/images/Telia_5th-Element_Deep-Purple_080.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'TeliaSans', sans-serif;
+    font-size: larger;
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.header {
+    background-color: #29003e;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-family: 'TeliaSansHeading', sans-serif;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5em; 
+}
+
+
+
+.content {
+    flex: 1; 
+    padding-top: 12%;
+    padding-bottom: 15%;
+    padding-left: 20%;
+    padding-right: 20%;
+    min-height: calc(100vh - 160px); 
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+}
+
+
+.footer {
+    background-color: #29003e;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-family: 'TeliaSansBold', sans-serif;
+    font-size: 0.85em; 
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+
+button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    font-family: 'TeliaSansBold', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #a004d8;
+}
+
+
+.no-scroll {
+    overflow: hidden; 
+    height: 100vh; 
+}
+
+
+.end {
+    height: fit-content;
+    display: flex;
+    flex: 1; 
+}
+
+.two-columns {
+    display: flex;
+    gap: 10%;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.column:first-child {
+    flex: 1; 
+    margin-left: 10%;
+}
+.column:last-child {
+    flex: 1.9; 
+    padding-right: 40px;
+}
+
+.component {
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.green {
+    background-color: #29003e;
+    border-color: rgba(0, 255, 0, 1);
+    border-style: inset;
+}
+
+.yellow {
+    background-color: #29003e;
+    border-color: rgba(255, 255, 0, 1);
+    border-style: inset;
+}
+
+.red {
+    background-color: #29003e;
+    border-color: rgba(255, 0, 0, 1);
+    border-style: inset;
+}
+
+.skoor {
+    font-size:30px;
+}

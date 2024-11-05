@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Hub</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="no-scroll">
+
+    <header class="header">
+        <h1>Telia Digital Hub</h1>
+    </header>
+
+    <div class="two-columns end">
+            <div class="column">
+                <div class="component skoor">
+                    <p>Aitäh vastamast!<br> Sinu skoor: *skoor*/21*värv* </p>
+                </div>
+                <div class="component">
+                    <form action="/finalize" method="POST">
+                        <label for="email" class="form-label">Võtame Teiega ühendust:</label>
+                        <input type="email" class="form-control" id="email" name="email" required placeholder="Email">
+                        <button type="submit" class="button">Saada vastus</button>
+                    </form>
+                    <form action="/start-over" method="POST">
+                        <button type="submit" class="button">Algusesse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="column">
+                <div class="component green">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dolores reiciendis quos, in repellendus assumenda, temporibus, recusandae saepe voluptas sunt iste perspiciatis numquam reprehenderit consectetur beatae repudiandae consequuntur nihil facere!</p>
+                </div>
+                <div class="component yellow">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ea architecto fugit blanditiis ullam, optio voluptas numquam similique aliquam aut ab excepturi culpa eveniet dolores dicta at, suscipit omnis corrupti.</p>
+                </div>
+                <div class="component red">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia iusto corporis cumque sunt amet numquam tempore quae adipisci nesciunt veritatis, dolore qui eius maxime eveniet. Unde quidem voluptates accusamus consequuntur?</p>
+                </div>
+            </div>
+    </div>
+
+    <footer class="footer">
+        <p>Telia Eesti AS</p>
+        <p>Telia is a registered Trademark of Telia Company AB</p>
+      </footer>
+</body>
+</html>
