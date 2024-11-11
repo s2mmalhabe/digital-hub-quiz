@@ -16,7 +16,9 @@
     <div class="two-columns end">
             <div class="column">
                 <div class="component skoor">
-                    <p>Aitäh vastamast!<br> Sinu skoor: *skoor*/21*värv* </p>
+                    <p>Aitäh vastamast!<br> Sinu skoor: <%= score %>/21 
+                        <span class="circle <%= grade %>"></span>
+                    </p>
                 </div>
                 <div class="component">
                     <form action="/finalize" method="POST">
@@ -30,14 +32,14 @@
                 </div>
             </div>
             <div class="column">
-                <div class="component green">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dolores reiciendis quos, in repellendus assumenda, temporibus, recusandae saepe voluptas sunt iste perspiciatis numquam reprehenderit consectetur beatae repudiandae consequuntur nihil facere!</p>
+                <div class="component greeninfo">
+                    <p>Väga hea! Keskkonnasäästlik mõtteviis on paista sinu ettevõtte IT otsustes. Oled teinud juba enamasti otsuseid, mis on sinu IT teinud efektiivsemaks ja keskkonda hoidvamaks. Kui tunned huvi, mida veel teha saad, siis võta Teliaga ühendust.</p>
                 </div>
-                <div class="component yellow">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ea architecto fugit blanditiis ullam, optio voluptas numquam similique aliquam aut ab excepturi culpa eveniet dolores dicta at, suscipit omnis corrupti.</p>
+                <div class="component yellowinfo">
+                    <p>Pole paha! Sinu ettevõtte IT otsuseid on suunanud ka keskkonnahoidlik mõtlemine ja oled juba leidnud viise, kuidas oma IT-d efektiivselt korraldada. Mõnedes kohtades on veel paranemisruumi ja Telia saab sind aidata.</p>
                 </div>
-                <div class="component red">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia iusto corporis cumque sunt amet numquam tempore quae adipisci nesciunt veritatis, dolore qui eius maxime eveniet. Unde quidem voluptates accusamus consequuntur?</p>
+                <div class="component redinfo">
+                    <p>Paranemisruumi veel on. Tundub, et keskkonnahoid ei ole praegu veel olnud tähelepanu all kui oled teinud IT otsuseid. Keskkonna hoid ja efektiivsus käivad tihti käsikäes ja Telia saaks aidata sul liikuda kiiremini efektiivsuse suunas. Võta meiega ühendust ja räägime täpsemalt.</p>
                 </div>
             </div>
     </div>

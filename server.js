@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
+const session = require('express-session');
 const questions = require('./questions');
 
 const app = express();
@@ -10,67 +11,88 @@ app.use(express.static('public'));
 app.use('/node_modules', express.static('node_modules'));
 
 
-let currentQuestion = 0;
-let score = 0;
-let answers = [];
+app.use(session({
+    secret: 'your-secret-key', 
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false } 
+}));
 
 app.get('/', (req, res) => {
+    if (!req.session.currentQuestion) {
+        req.session.currentQuestion = 0;
+        req.session.score = 0;
+        req.session.answers = [];
+    }
+
     res.render('index', { 
-        question: questions[currentQuestion],
-        currentQuestion: currentQuestion 
+        question: questions[req.session.currentQuestion],
+        currentQuestion: req.session.currentQuestion 
     });
 });
 
 app.post('/submit-answer', (req, res) => {
     const { answer } = req.body;
-    answers.push(answer);
+    req.session.answers.push(answer);
 
-    // Calculate score
-    if (answer === 'a') score += 3;
-    else if (answer === 'b') score += 2;
-    else if (answer === 'c') score += 1;
+    if (req.session.currentQuestion <= questions.length - 1) {
 
-    currentQuestion++;
+        if (answer === 'a') req.session.score += 3;
+        else if (answer === 'b') req.session.score += 2;
+        else if (answer === 'c') req.session.score += 1;
+    }
 
-    if (currentQuestion < questions.length) {
+
+    req.session.currentQuestion++;
+
+    if (req.session.currentQuestion < questions.length) {
         res.redirect('/');
     } else {
-        res.sendFile(__dirname + '/public/end.html');
+        let grade = '';
+        if (req.session.score >= 15) grade = 'green';
+        else if (req.session.score >= 11) grade = 'yellow';
+        else grade = 'red';
+
+        req.session.grade = grade;
+
+        res.render('end', { score: req.session.score, grade: grade });
     }
 });
 
-
-
 app.post('/finalize', (req, res) => {
     const email = req.body.email;
-    let grade = '';
+    const grade = req.session.grade;
+    const score = req.session.score;
+    const answers = req.session.answers.join(';'); 
 
-    if (score >= 15) grade = 'green';
-    else if (score >= 11) grade = 'yellow';
-    else grade = 'red';
+    const filePath = 'results.csv';
+    const fileExists = fs.existsSync(filePath);
 
-    // Save results
-    const result = `Email: ${email}, Grade: ${grade}, Score: ${score}, Answers: ${JSON.stringify(answers)}\n`;
-    fs.appendFileSync('results.txt', result);
+    const result = `${email},${grade},${score},"${answers}"\n`;
 
-    // Reset for next user
-    currentQuestion = 0;
-    score = 0;
-    answers = [];
+    if (!fileExists) {
+        const header = 'Email,Grade,Score,Answers\n';
+        fs.writeFileSync(filePath, header, { flag: 'a' });
+    }
+
+    fs.appendFileSync(filePath, result);
+
+    req.session.currentQuestion = 0;
+    req.session.score = 0;
+    req.session.answers = [];
+    req.session.grade = '';
 
     res.redirect('/');
 });
 
 
 app.post('/start-over', (req, res) => {
-    // Reset everything for a new quiz without saving any info
-    currentQuestion = 0;
-    score = 0;
-    answers = [];
+    req.session.currentQuestion = 0;
+    req.session.score = 0;
+    req.session.answers = [];
 
     res.redirect('/');
 });
-
 
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');

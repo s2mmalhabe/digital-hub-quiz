@@ -18,9 +18,15 @@
     <form action="/submit-answer" method="POST">
       <label class="form-label fw-semibold mb-4"><%= question.question %></label>
         <div>
-            <input type="radio" name="answer" value="a" required> <%= question.answers.a %><br>
-            <input type="radio" name="answer" value="b"> <%= question.answers.b %><br>
-            <input type="radio" name="answer" value="c"> <%= question.answers.c %><br>
+          <label class="d-block">
+            <input type="radio" name="answer" value="a" required> <%= question.answers.a %>
+        </label>
+        <label class="d-block">
+            <input type="radio" name="answer" value="b"> <%= question.answers.b %>
+        </label>
+        <label class="d-block">
+            <input type="radio" name="answer" value="c"> <%= question.answers.c %>
+        </label>
         </div>
       <button type="submit" class="button">Järgmine</button>
     </form>

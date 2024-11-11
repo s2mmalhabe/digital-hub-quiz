@@ -1,14 +1,14 @@
 module.exports = [
     {
-        question: "Kas seadmete ostmisel on tootjate poolt raporteeritud seadme eluaja CO2 jalajälg üheks kriteeriumiks seadme valikul?",
+        question: "Kas seadmete valikul on tootjate poolt raporteeritud seadme eluea CO2 jalajälg üheks kriteeriumiks seadmete valikul?",
         answers: {
-            a: "Jah, alati vaatame ka seadme CO2 jalajälge ja eelistame väiksemat jalajälge isegi kui see seade on kallim.",
-            b: "Jah, vaatame seadme CO2 jalajälge, kuid see ei ole otsutamisel oluline kriteerium.",
-            c: "Ei ole kunagi arvestanud seadme soetamisel CO2 jalajälge."
+            a: "Jah, vaatame alati ka seadme CO2 jalajälge ja eelistame väiksemat jalajälge, isegi kui see seade on kallim.",
+            b: "Jah, vaatame seadme CO2 jalajälge, kuid see ei ole otsutamiseks oluline kriteerium.",
+            c: "Me ei tea, kust leida toote CO2 jalajälge ja ei ole osanud seda seadme soetamisel arvesse võtta."
         }
     },
     {
-        question: "Kus asuvad sinu ettevõtte serverid?",
+        question: "Millist serverteenust su ettevõte kasutab?",
         answers: {
             a: "Kasutan pilveteenuseid serverteenuste majutamiseks.",
             b: "Serverid asuvad teenusepakkuja jagatud serveriruumis.",
@@ -16,11 +16,11 @@ module.exports = [
         }
     },
     {
-        question: "Kuidas jagatakse sinu ettevõttes ühistöös kasutatavaid dokumente?",
+        question: "Kuidas jagatakse sinu ettevõttes ühiseks kasutatamiseks vajalikke dokumente?",
         answers: {
-            a: "Dokumendid on digitaalsed ja link ühele dokumendile edastatakse vajalikele töötajatele.",
-            b: "Dokumendid on digitaalsed ja need edastatakse emaili teel näiteks täiendamiseks või kommenteerimiseks.",
-            c: "Dokumendid prinditakse välja ja kolleegid teevad neile märkmeid kirjalikult."
+            a: "Dokumendid on digitaalsed ja link ühele dokumendile edastatakse vajalikele töötajatele. Vajadusel saab mitu töötajat korraga dokumentiga töötada.",
+            b: "Dokumendid on digitaalsed, kuid need edastatakse emailiga töötajatele täiendusteks ja kommentaarideks.",
+            c: "Dokumendid prinditakse välja ja erinevad töötajad saavad teha märkmeid prinditud dokumendile."
         }
     },
     {
@@ -32,27 +32,27 @@ module.exports = [
         }
     },
     {
-        question: "Kui arvuti ei sobi enam töötajale, sest tema vajadused on muutunud (arvuti on muutunud aeglaseks), siis mis saab tema arvutist edasi?",
+        question: "Kui töötaja tööülesannete täitmiseks ei ole kasutatav arvuti enam efektiivselt toimiv, siis mis saab tema arvutist edasi?",
         answers: {
-            a: "Ettevõte kasutab rendi arvuteid ja me saame paindlikult valida töötajatele sobiva mudeli. Kui tagastame arvuti, siis läheb see uuesti rendileandja kasutusse.",
-            b: "Ettevõttes püütakse leida teine roll, kus saaks seda sama arvutit edasi kasutada, kuid see ei ole alati võimalik.",
-            c: "Arvuti utiliseeritakse kuna seda ei ole enam võimalik kasutada."
+            a: "Ettevõte kasutab rendi arvuteid ja me saame paindlikult valida töötajatele sobiva mudeli. Tagastades arvuti läheb see uuesti läbi rendileandja kasutusse.",
+            b: "Ettevõttes püütakse kasutatud arvutile leida uus kasutaja. Kui see ei ole võimalik, siis jääb see lattu seisma või proovitakse leida ostja.",
+            c: "Arvuti antakse üle elektroonikajäätme käitlejale, sest seda ei ole enam võimalik ettevõtte sees kasutada."
         }
     },
     {
         question: "Kas töötajatel on võimalus teha turvaliselt kaugtööd ning osaleda videokoosolekutel?",
         answers: {
-            a: "Töötajatel on sülearvutid ning turvalised VPN ühenduse võimalused, mis võimaldavad kasutada ettevõtte rakendusi väljaspoolt kontorit ning osaleda kohtumistel kvaliteetse video teel.",
-            b: "Töötajad saavad teha kaugtööd, kuid koosolekuteks ja kohtumisteks peavad ikka kontorisse tulema.",
-            c: "Töötajatel ei ole võimalus teha kaugtööd. Ettevõtte rakendused on kättesaadavad ainult ettevõtte ruumidest."
+            a: "Töötajatel on sülearvutid ning turvalised VPN ühenduse võimalusedkasutamaks ettevõtte rakendusi väljaspool kontorit ja osalemiseks videokoosolekutel.",
+            b: "Töötajad saavad teha kaugtööd, kuid koosolekuteks peavad tulema kontorisse.",
+            c: "Töötajatel ei ole võimalik teha kaugtööd, sest puudub VPN ühenduse võimalus ja ettevõtte rakendused on kättesaadavad ainult ettevõtte kohapeal."
         }
     },
     {
         question: "Kas sinu ettevõte kasutab täna kaugeltloetavaid seadmeid ehk IoT lahendusi?",
         answers: {
-            a: "Jah me juba kasutame täna IoT lahendusi andmete kogumiseks ja analüüsimiseks.",
+            a: "Jah me juba täna kasutame IoT lahendusi andmete kogumiseks ja analüüsimiseks.",
             b: "Jah, kuid meil esineb probleeme andmete kogumise ja analüüsimisega.",
-            c: "Meie ettevõte ei vaja IoT seadmeid ega nende kogutud andmeid."
+            c: "Ei, me ei ole mõelnud IoT lahenduste ja andmete kogumise peale."
         }
     },
 ];
