@@ -25,8 +25,6 @@ app.get('/', (req, res) => {
         req.session.answers = [];
     }
 
-    console.log("Question length:", questions.length);
-    console.log("Current Question:", parseInt.currentQuestion);
     
 
     res.render('index', { 
