@@ -19,11 +19,15 @@ app.use(session({
 }));
 
 app.get('/', (req, res) => {
-    if (!req.session.currentQuestion) {
+    if (!req.session.currentQuestion || req.session.currentQuestion === questions.length) {
         req.session.currentQuestion = 0;
         req.session.score = 0;
         req.session.answers = [];
     }
+
+    console.log("Question length:", questions.length);
+    console.log("Current Question:", parseInt.currentQuestion);
+    
 
     res.render('index', { 
         question: questions[req.session.currentQuestion],

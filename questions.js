@@ -34,7 +34,7 @@ module.exports = [
     {
         question: "Kui töötaja tööülesannete täitmiseks ei ole kasutatav arvuti enam efektiivselt toimiv, siis mis saab tema arvutist edasi?",
         answers: {
-            a: "Ettevõte kasutab rendi arvuteid ja me saame paindlikult valida töötajatele sobiva mudeli. Tagastades arvuti läheb see uuesti läbi rendileandja kasutusse.",
+            a: "Ettevõte kasutab rendi arvuteid ja saame paindlikult valida töötajatele sobiva mudeli. Tagastades läheb arvuti uuesti läbi rendileandja kasutusse.",
             b: "Ettevõttes püütakse kasutatud arvutile leida uus kasutaja. Kui see ei ole võimalik, siis jääb see lattu seisma või proovitakse leida ostja.",
             c: "Arvuti antakse üle elektroonikajäätme käitlejale, sest seda ei ole enam võimalik ettevõtte sees kasutada."
         }
@@ -42,13 +42,13 @@ module.exports = [
     {
         question: "Kas töötajatel on võimalus teha turvaliselt kaugtööd ning osaleda videokoosolekutel?",
         answers: {
-            a: "Töötajatel on sülearvutid ning turvalised VPN ühenduse võimalusedkasutamaks ettevõtte rakendusi väljaspool kontorit ja osalemiseks videokoosolekutel.",
+            a: "Töötajatel on sülearvutid ning turvalised VPN ühenduse võimalused kasutamaks ettevõtte rakendusi väljaspool kontorit ja osalemiseks videokoosolekutel.",
             b: "Töötajad saavad teha kaugtööd, kuid koosolekuteks peavad tulema kontorisse.",
-            c: "Töötajatel ei ole võimalik teha kaugtööd, sest puudub VPN ühenduse võimalus ja ettevõtte rakendused on kättesaadavad ainult ettevõtte kohapeal."
+            c: "Töötajatel ei ole võimalik teha kaugtööd, sest puudub VPN ühenduse võimalus ja ettevõtte rakendused on kättesaadavad ainult ettevõttes kohapeal."
         }
     },
     {
-        question: "Kas sinu ettevõte kasutab täna kaugeltloetavaid seadmeid ehk IoT lahendusi?",
+        question: "Kas sinu ettevõte kasutab täna kaugloetavaid seadmeid ehk IoT lahendusi?",
         answers: {
             a: "Jah me juba täna kasutame IoT lahendusi andmete kogumiseks ja analüüsimiseks.",
             b: "Jah, kuid meil esineb probleeme andmete kogumise ja analüüsimisega.",

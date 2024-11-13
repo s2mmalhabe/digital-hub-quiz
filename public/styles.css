@@ -223,3 +223,35 @@ button:hover {
 .red {
     background-color: red;
 }
+
+
+@media only screen and (max-width: 768px) {
+
+    .phone-header{
+        font-size: 1em;
+        padding: 3%;
+    }
+
+    .phone-container{
+        padding: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: inline;
+        overflow: scroll;
+        scrollbar-width: none;
+    }
+
+    .phone-component{
+        padding-right: 4%;
+    }
+
+    .phone-footer{
+        font-size: 0.7em;
+        padding: 1%;
+    }
+
+    .phone-button{
+        width: 100%;
+    }
+
+}
